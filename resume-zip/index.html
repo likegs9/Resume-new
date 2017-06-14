@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>移动端简历</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <link href="./css/move.css" rel="stylesheet" type="text/css">
+    <style>
+
+    </style>
+    <script>
+        ~function(desW){
+            var winW = document.documentElement.clientWidth;
+            var ratio = winW / desW;
+            document.documentElement.style.fontSize = ratio*100+'px';
+            //alert(document.documentElement.clientHeight)
+        }(750);
+    </script>
+</head>
+<body>
+<div class="loading">
+    <div class="main">
+        <div class="main-sun"></div>
+        <div class="cloud"></div>
+        <div class="main-leader">
+            <div class="main-leader-move"></div>
+            <div class="main-leader-ground"></div>
+        </div>
+        <div class="cloud1"></div>
+        <p><span></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span></p>
+    </div>
+</div>
+<div id="bg">
+    <div id="warpper">
+        <!--云、播放器-->
+        <div id="cloud">
+            <div class="clouds">
+                <audio src="./imgs/music.mp3" preload="metadata" loop id="musicCloud"></audio>
+                <div class="music-sun" id="musicClick"></div>
+                <div class="clouds-inner"></div>
+            </div>
+        </div>
+
+        <!--主要移动部分-->
+        <div id="move-inner" style="left:0;-webkit-transform: translateX(0);transform: translateX(0);">
+
+            <!--第一个移动场景-->
+            <div id="bg1" class="bg-count b-g ">
+              <div class="bg-move1">
+                <div id="hello">
+                    <span class="bee bee1"></span>
+                    <svg id="svg1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" width="240" height="95" viewBox="0 0 240 95" class="hello-svg">
+                        <g>
+                            <path class="cls-11 h1 h1m" d="M8,13a609,609,0,0,1,2,74"/>
+                            <path class="cls-11 h2 h2m" d="M14,58A57,57,0,0,1,43,48"/>
+                            <path class="cls-11 h3 h3m" d="M50,5,47,81"/>
+                            <path class="cls-11 h4 h4m" d="M66,49c7,2,15,3,22,1s13-10,11-17S87,23,80,26,69,36,67,43s-3,14,0,21S79,74,87,74s15-4,22-8"/>
+                            <path class="cls-11 h5 h5m" d="M121,11V72"/>
+                            <path class="cls-11 h6 h6m" d="M154,7a476,476,0,0,1-2,71"/>
+                            <path class="cls-11 h7 h7m" d="M173,41c-2,10-1,25,9,28s17-6,20-14,3-16,0-22-13-11-19-7"/>
+                            <path class="cls-11 h8 h8m" d="M230,8a372,372,0,0,1-1,42"/>
+                            <path class="cls-2 h9 h9m" d="M226,63c-5,0-5,7,0,8s7-5,3-7"/>
+                        </g>
+                    </svg>
+                    <span class="bee bee2"></span>
+                </div>
+
+                <div class="bg-move">
+                    <div class="all same1 left"></div>
+                    <div class="all same1 right"></div>
+                </div>
+
+                <div id="car-game">
+                    <svg id="svg2" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 380" class="path">
+                        <image id="svg2-img" width='375' height='180' xlink:href="./imgs/qq.png" class="car" x="0" y="-10"></image>
+                        <g>
+                            <image width="35" height="15" xlink:href="./imgs/pathway-car.png" class="bj1" x="0" y="0"/>
+                            <animateMotion path="M24,122S9,115,2,91C-2,78,0,56,14,43c34-30,66-2,79,9s43,36,68,30,40-21,41-42-10-28-21-28-19,9-20,23,6,34,23,45,34,20,62,19c56-2,55-23,74-36s55-9,55-9" begin="0s" dur="10s" repeatCount="indefinite" rotate="auto"/>
+                        </g>
+
+                        <path class="cls-1" d="M24,122S9,115,2,91C-2,78,0,56,14,43c34-30,66-2,79,9s43,36,68,30,40-21,41-42-10-28-21-28-19,9-20,23,6,34,23,45,34,20,62,19c56-2,55-23,74-36s55-9,55-9" />
+                    </svg>
+                </div>
+              </div>
+            </div>
+
+            <!--第二个移动场景-->
+            <div id='bg2' class="b-g bg-count">
+                <div class="bg-move2" id="play2">
+                    <div class="all right"></div>
+                </div>
+            </div>
+
+
+            <!--第三个移动场景-->
+            <div id='bg3' class="b-g bg-count">
+                <div class="bg-move3">
+                    <div class="all left"></div>
+                    <div class="flag flag-move">
+                        <div class="flag-inside">
+                            <div class="flag-bg flag-top"></div>
+                            <div class="flag-bg flag-arrow"></div>
+                            <div class="flag-info">
+                                <p class="flag-bg flag-infoside"></p>
+                            </div>
+                            <div class="bold-line"></div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="bg-shake">
+                            <div class="all same-shake shake1"></div>
+                            <div class="all same-shake shake2"></div>
+                        </div>
+                        <div class="same-shake flower"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--第四个移动场景-->
+            <div id='bg4' class="b-g bg-count">
+                <div class="bg-move4">
+                    <div class="info-brand info">
+                        <div class="brand-left"></div>
+                        <div class="brand-center">
+                            <p>姓名：高姗</p>
+                            <p>性别：女<p>
+                            <p>年龄：26<p>
+                            <p>学历：本科<p>
+                            <p>工作经验：3年<p>
+                            <p>毕业院校：<p>
+                            <p>北京联合大学广告学院
+                                网络传播专业</p>
+                        </div>
+                        <div class="brand-right"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--第五个移动场景-->
+            <div id='bg5' class="b-g bg-count">
+                <div class="bg-move5">
+                    <div class="left">
+                        <div class="rotate-sit">
+                            <div class="top">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="all bottom"></div>
+                        </div>
+                    </div>
+                    <div class="flag flag-move">
+                        <div class="flag-inside">
+                            <div class="flag-bg flag-top"></div>
+                            <div class="flag-bg flag-arrow"></div>
+                            <div class="flag-info">
+                                <p class="flag-bg flag-infoside"></p>
+                            </div>
+                            <div class="bold-line"></div>
+                        </div>
+                    </div>
+                    <div class="all right"></div>
+                </div>
+            </div>
+
+            <!--第六个移动场景-->
+            <div id='bg6' class="b-g bg-count">
+                <div class="bg-move6">
+                    <div class="top photo-m">
+                        <div class="all decoration"></div>
+                        <div class="top-border">
+                            <img src="imgs/myself.jpg"/>
+                        </div>
+                        <div class="top-word">
+                            我来自北京^_^
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="all left bjleft"></div>
+                        <div class="all right bjright"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--第七个移动场景 -->
+            <div id='bg7' class="b-g bg-count">
+                <div class="bg-move7">
+                    <div class="all left"></div>
+                    <div class="all center"></div>
+                    <div class="flag flag-move">
+                        <div class="flag-inside">
+                            <div class="flag-bg flag-top"></div>
+                            <div class="flag-bg flag-arrow"></div>
+                            <div class="flag-info">
+                                <p class="flag-bg flag-infoside"></p>
+                            </div>
+                            <div class="bold-line"></div>
+                        </div>
+                    </div>
+                    <div class="all right"></div>
+                </div>
+            </div>
+
+            <!--第八个移动场景 -->
+            <div id='bg8' class="b-g bg-count">
+                <div class="bg-move8">
+                    <ul class="tabel-skil">
+                        <li class="lis lis1">
+                            <div><span>技能</span></div>
+                            <p>入门</p>
+                            <p>掌握</p>
+                            <p>熟练</p>
+                        </li>
+                        <li class="lis">
+                            <div><span>HTML/CSS</span></div>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                        </li>
+                        <li class="lis">
+                            <div><span>HTML5/CSS3</span></div>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                        </li>
+                        <li class="lis">
+                            <div><span>JavaScript</span></div>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                        </li>
+                        <li class="lis">
+                            <div><span>Node</span></div>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                        </li>
+                        <li class="lis">
+                            <div><span>React</span></div>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+            <div id='bg9' class="b-g bg-count">
+                <div class="bg-move9">
+                    <ul class="tabel-skil">
+                        <li class="lis lis1">
+                            <div><span>技能</span></div>
+                            <p>入门</p>
+                            <p>掌握</p>
+                            <p>熟练</p>
+                        </li>
+                        <li>
+                            <div><span>webpack</span></div>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                        </li>
+                        <li>
+                            <div><span>Gulp</span></div>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                            <p></p>
+                        </li>
+                        <li>
+                            <div><span>jQuery</span></div>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                            <p></p>
+                        </li>
+                        <li>
+                            <div><span>Ps</span></div>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                        </li>
+                        <li>
+                            <div><span>Ai</span></div>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                            <p><span></span></p>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+
+            <!--第10个移动场景 -->
+            <div id='bg10' class="b-g bg-count">
+                <div class="bg-move10">
+                    <div class="all left"></div>
+                    <div class="flag flag-move">
+                        <div class="flag-inside">
+                            <div class="flag-bg flag-top"></div>
+                            <div class="flag-bg flag-arrow"></div>
+                            <div class="flag-info">
+                                <p class="flag-bg flag-infoside"></p>
+                            </div>
+                            <div class="bold-line"></div>
+                        </div>
+                    </div>
+                    <div class="all right"></div>
+                </div>
+            </div>
+
+
+            <!--第11个移动场景-->
+            <div id='bg11' class="b-g bg-count">
+                <div class="bg-move11">
+                    <div class="info-brand info">
+                        <div class="brand-left"></div>
+                        <div class="brand-center">
+                            <p style="margin-top:.3rem">2013年12月-2016年6月</p>
+                            <p>公司:北京大东体育文化有限公司</p>
+                            <p>职责:web前端</p>
+                            <p>工作内容:</p>
+                            <p>开发微信商城，修改平台系统页面，设计</p>
+
+                            <p style="margin-top:.3rem">2016年10月至2017年4月</p>
+                            <p>公司:北京珠峰世纪技术培训有限公司</p>
+                            <p>职责:web前端，设计</p>
+                            <p>工作内容:</p>
+                            <p>修改、更新网站页面、React助教、设计</p>
+                        </div>
+                        <div class="brand-right"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!--第12个移动场景 -->
+            <div id='bg12' class="b-g bg-count">
+                <div class="bg-move12">
+                    <div class="all left"></div>
+                    <div class="flag flag-move">
+                        <div class="flag-inside">
+                            <div class="flag-bg flag-top"></div>
+                            <div class="flag-bg flag-arrow"></div>
+                            <div class="flag-info">
+                                <p class="flag-bg flag-infoside"></p>
+                            </div>
+                            <div class="bold-line"></div>
+                        </div>
+                    </div>
+                    <div class="all right"></div>
+                </div>
+            </div>
+
+            <!--第12个移动场景 -->
+            <div id='bg13' class="b-g bg-count">
+                <div class="bg-move13">
+                   <div class="ballloon ballloon1"></div>
+                   <div class="ballloon ballloon2"></div>
+                   <div class="ballloon ballloon3"></div>
+                   <div class="ballloon ballloon4"></div>
+                   <div class="ballloon ballloon5"></div>
+                   <div class="ballloon ballloon6"></div>
+                   <div class="ballloon ballloon7"></div>
+                   <div class="ballloon ballloon8"></div>
+                   <div class="ballloon ballloon9"></div>
+                   <div class="ballloon ballloon10"></div>
+                    <div class="letter l-move">
+                        <div class="letter-inside">
+                            <div class="bird">
+                                <div class="left"></div>
+                                <div class="right"></div>
+                            </div>
+                            <div class="letter-main">
+                                <!--id="letter-move" id="letter-move2"-->
+
+                                    <img src="./imgs/letter-top.png" class="letter-top"/>
+                                <div class="letter-center" >
+                                    <p>快来联系我吧~</p>
+                                    <p>高姗</p>
+                                    <p><a href="tel:13488802299">Tel: 13488802299</a></p>
+                                    <p>QQ:289541175</p>
+                                    <p>邮件:gsgowell9@gmail.com</p>
+                                </div>
+                                <div class="letter-bottom">
+                                    <img src="./imgs/letter-bottom.png"/>
+                                </div>
+                                <div class="letter-bg"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div style="position: absolute;bottom:0;height:2.5rem;width:100%">
+                <!--马路-->
+                <div id="road">
+                    <p class="line"></p>
+                </div>
+
+                <!--土地-->
+                <div id="ground"></div>
+            </div>
+
+
+        </div>
+
+        <!--按钮、小人部分-->
+        <div id="move-bottom">
+            <div id="leader" style="display: block">
+                <div class="leader-bg leader-hair"></div>
+                <div class="leader-bg leader-head"></div>
+                <div class="leader-bg leader-arm"></div>
+                <div class="leader-bg leader-body"></div>
+            </div>
+            <div id="leader-move" style="display: none"></div>
+            <div class="button">
+                <div id="inner-button">
+                    <div class="inner-line">Go!</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="js/init.js"></script>
+<script src="js/move.js"></script>
+</body>
+</html>
